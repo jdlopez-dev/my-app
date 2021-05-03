@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
+import { TirarComponent } from './tirar/tirar.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, EmpleadoComponent,EmpleadosComponent
+    AppComponent, EmpleadoComponent,EmpleadosComponent, TirarComponent
   ],
   imports: [
     BrowserModule
