@@ -1,1 +1,6 @@
 <h1>Empleados de la empresa </h1>
+
+<div *ngFor="let i of [].constructor(20),let x = index">
+    <app-empleado [IdEmpleado] = x></app-empleado>
+</div>
+

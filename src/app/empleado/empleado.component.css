@@ -1,3 +1,6 @@
-p{
-    background-color: red;
+.empleado{
+    border-color: black;
+    border-style: solid;
+    padding: 1rem;
+    margin: 1rem;
 }
