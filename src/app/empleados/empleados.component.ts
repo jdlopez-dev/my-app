@@ -7,10 +7,17 @@ import { Component, OnInit } from "@angular/core";
 })
 export class EmpleadosComponent implements OnInit {
 
+    public nuero_empleados: number = 1; 
+
     constructor() {
 
     }
 
     ngOnInit(): void {
+    }
+
+    actualizarEmpleados(value: string){
+        console.log(value)
+        this.nuero_empleados = Number(value);
     }
 }
