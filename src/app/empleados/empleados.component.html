@@ -1,8 +1,13 @@
 <hr>
 <h1>Empleados de la empresa </h1>
-Introduce numero de empleados: <input type="number" #nuero_empleados_input value={{nuero_empleados}} [disabled]="enableCuadro">
+Introduce numero de empleados: <input type="number" #nuero_empleados_input value={{nuero_empleados}} [disabled]="enableInputEmpleados">
 <input type="button" value="Actualizar" (click)="actualizarEmpleados(nuero_empleados_input.value)" >
+Activar: <input type="checkbox" name="" id="activar_caja" [checked]="checkedCheckBox" (change)="setActivarCajaEmpleados($event)">
 <hr>
+
+<div *ngIf="!nuero_empleados">{{textoDeRegistro}}</div>
+
+
 <div *ngFor="let i of [].constructor(nuero_empleados),let x = index">
     <app-empleado [IdEmpleado] = x></app-empleado>
 </div>

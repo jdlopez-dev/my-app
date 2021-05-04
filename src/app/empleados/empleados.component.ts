@@ -8,13 +8,22 @@ import { Component, OnInit } from "@angular/core";
 export class EmpleadosComponent implements OnInit {
 
     public nuero_empleados: number = 1; 
-    enableCuadro = true;
+    enableInputEmpleados = true;
+    checkedCheckBox = false;
+    textoDeRegistro = "no hay nadie registrado";
 
-    constructor() {
+    constructor() { 
 
     }
 
     ngOnInit(): void {
+    }
+
+    setActivarCajaEmpleados(event: Event){
+        alert("Se ha activiado la generación de empleados");
+        this.checkedCheckBox = (<HTMLInputElement>event.target).checked;
+
+        this.enableInputEmpleados = this.checkedCheckBox ? false : true;
     }
 
     actualizarEmpleados(value: string){
