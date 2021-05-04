@@ -1,7 +1,7 @@
 <hr>
 <h1>Empleados de la empresa </h1>
-Introduce numero de empleados: <input type="number" #nuero_empleados_input value={{nuero_empleados}}>
-<input type="button" value="Actualizar" (click)="actualizarEmpleados(nuero_empleados_input.value)">
+Introduce numero de empleados: <input type="number" #nuero_empleados_input value={{nuero_empleados}} [disabled]="enableCuadro">
+<input type="button" value="Actualizar" (click)="actualizarEmpleados(nuero_empleados_input.value)" >
 <hr>
 <div *ngFor="let i of [].constructor(nuero_empleados),let x = index">
     <app-empleado [IdEmpleado] = x></app-empleado>

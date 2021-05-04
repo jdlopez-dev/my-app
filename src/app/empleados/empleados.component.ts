@@ -8,6 +8,7 @@ import { Component, OnInit } from "@angular/core";
 export class EmpleadosComponent implements OnInit {
 
     public nuero_empleados: number = 1; 
+    enableCuadro = true;
 
     constructor() {
 
