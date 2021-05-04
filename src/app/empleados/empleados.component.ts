@@ -30,6 +30,11 @@ export class EmpleadosComponent implements OnInit {
     }
 
     actualizarEmpleados(value: string){
-        this.nuero_empleados = Number(value);
+        let numEmpleados = Number(value);
+        if(numEmpleados < 0){
+            alert("numero no valido");
+        }else{
+            this.nuero_empleados = numEmpleados;
+        }
     }
 }

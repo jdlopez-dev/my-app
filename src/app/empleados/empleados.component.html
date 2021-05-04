@@ -1,7 +1,7 @@
 <hr>
 <h1>Empleados de la empresa </h1>
-Introduce numero de empleados: <input type="number" #nuero_empleados_input value={{nuero_empleados}} [disabled]="enableInputEmpleados">
-<input type="button" value="Actualizar" (click)="actualizarEmpleados(nuero_empleados_input.value)" >
+Introduce numero de empleados: <input type="number" #nuero_empleados_input value={{nuero_empleados}} [disabled]="enableInputEmpleados" min="0">
+<input type="button" value="Actualizar" (click)="actualizarEmpleados(nuero_empleados_input.value)" [disabled]="enableInputEmpleados">
 Activar: <input type="checkbox" name="" id="activar_caja" [checked]="checkedCheckBox" (change)="setActivarCajaEmpleados($event)">
 
 <h2>
