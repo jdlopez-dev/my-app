@@ -8,6 +8,7 @@ import { Component, OnInit } from "@angular/core";
 export class EmpleadosComponent implements OnInit {
 
     public nuero_empleados: number = 1; 
+    notaInformativa: string = "Bienvenidos";
     enableInputEmpleados = true;
     checkedCheckBox = false;
     textoDeRegistro = "no hay nadie registrado";
@@ -20,10 +21,12 @@ export class EmpleadosComponent implements OnInit {
     }
 
     setActivarCajaEmpleados(event: Event){
-        alert("Se ha activiado la generación de empleados");
         this.checkedCheckBox = (<HTMLInputElement>event.target).checked;
-
         this.enableInputEmpleados = this.checkedCheckBox ? false : true;
+    }
+
+    cambiarNotaInformativa(event: Event){
+        this.notaInformativa = (<HTMLInputElement>event.target).value;
     }
 
     actualizarEmpleados(value: string){

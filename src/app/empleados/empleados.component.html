@@ -3,6 +3,13 @@
 Introduce numero de empleados: <input type="number" #nuero_empleados_input value={{nuero_empleados}} [disabled]="enableInputEmpleados">
 <input type="button" value="Actualizar" (click)="actualizarEmpleados(nuero_empleados_input.value)" >
 Activar: <input type="checkbox" name="" id="activar_caja" [checked]="checkedCheckBox" (change)="setActivarCajaEmpleados($event)">
+
+<h2>
+    Notas Informativa: {{notaInformativa}}
+</h2>
+
+Cambiar nota informativa: <input type="textarea" [(ngModel)] = "notaInformativa">
+
 <hr>
 
 <div *ngIf="!nuero_empleados">{{textoDeRegistro}}</div>
