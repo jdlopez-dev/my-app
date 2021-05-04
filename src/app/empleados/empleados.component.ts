@@ -17,7 +17,6 @@ export class EmpleadosComponent implements OnInit {
     }
 
     actualizarEmpleados(value: string){
-        console.log(value)
         this.nuero_empleados = Number(value);
     }
 }
